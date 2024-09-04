@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Edit Task</h2>
+<form method="post" action="{{ url_for('edit_task', task_id=task.id) }}">
+    <div class="mb-3">
+        <label for="task_name" class="form-label">Task Name</label>
+        <input type="text" class="form-control" id="task_name" name="task_name" value="{{ task.task_name }}" required>
+    </div>
+    <div class="mb-3">
+        <label for="task_description" class="form-label">Task Description</label>
+        <input type="text" class="form-control" id="task_description" name="task_description" value="{{ task.task_description }}" required>
+    </div>
+    <div class="mb-3">
+        <label for="task_date" class="form-label">Task Date</label>
+        <input type="date" class="form-control" id="task_date" name="task_date" value="{{ task.task_date }}" required>
+    </div>
+    <button type="submit" class="btn btn-success">Save Changes</button>
+</form>
+{% endblock %}

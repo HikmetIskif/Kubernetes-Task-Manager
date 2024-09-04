@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: flask-pod
+  labels: 
+    app: flask
+spec:
+  containers:
+  - name: flask
+    image: apptaskmanager:latest
+    imagePullPolicy: IfNotPresent

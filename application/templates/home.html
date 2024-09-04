@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Welcome to Task Manager</h1>
+        <p class="lead">Manage your tasks effectively.</p>
+        {% if 'username' in session %}
+            <p class="lead">Hello, {{ session['username'] }}!</p>
+            <a class="btn btn-primary btn-lg" href="{{ url_for('tasks') }}" role="button">Go to Your Tasks</a>
+        {% else %}
+            <a class="btn btn-primary btn-lg" href="{{ url_for('login') }}" role="button">Login to Manage Tasks</a>
+            <a class="btn btn-success btn-lg" href="{{ url_for('register') }}" role="button">Register</a>
+        {% endif %}
+    </div>
+{% endblock %}
