@@ -1,6 +1,7 @@
 # Kubernetes and AWS ECS Task Manager App
 This repository contains a task manager web application built with Python's Flask framework and PostgreSQL database. The application and database are containerized using Docker and can be set up 
-using Kubernetes deployment files. Additionally, the containers are deployed on AWS using various AWS services routed to [taskmanager.hikmetiskif.com](https://taskmanager.hikmetiskif.com) .
+using Kubernetes deployment files. Additionally, the containers are deployed on AWS using various AWS services routed to [taskmanager.hikmetiskif.com](https://taskmanager.hikmetiskif.com) . 
+(**NOTE:** Due to AWS costs, I stopped the services.)
 
 # About the Application
 The application is a web-based task manager that allows users to create, read, update, and delete tasks. It uses PostgreSQL as its database. 
